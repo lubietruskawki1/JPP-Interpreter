@@ -1,0 +1,22 @@
+fn returnInt(intArg: int, boolArg: bool, stringArg: string): int {
+  return intArg;
+}
+
+fn returnBool(intArg: int, boolArg: bool, stringArg: string): bool {
+  return boolArg;
+}
+
+fn returnString(intArg: int, boolArg: bool, stringArg: string): string {
+  return stringArg;
+}
+
+fn main(): void {
+  var intValue: int = returnInt(11, false, "Hello, world!");
+  printInt(intValue);
+
+  var boolValue: bool = returnBool(11, false, "Hello, world!");
+  printBool(boolValue);
+
+  var stringValue: string = returnString(11, false, "Hello, world!");
+  printString(stringValue);
+}

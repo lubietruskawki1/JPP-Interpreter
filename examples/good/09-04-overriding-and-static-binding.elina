@@ -1,0 +1,15 @@
+fn f(): int {
+  var x: int = 16;
+  {
+    var x: int = 8;
+    return x;
+  }
+}
+
+fn main(): void {
+  var x: int = f();
+  {
+    var x: int = -1;
+  }
+  printInt(x);
+}

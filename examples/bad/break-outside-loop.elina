@@ -1,0 +1,7 @@
+fn main(): void {
+  while (true) {
+    fn f(): void {
+      break;
+    }
+  }
+}

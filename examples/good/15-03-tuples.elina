@@ -1,0 +1,29 @@
+fn calculateGCDAndLCM(numbers: tuple<int, int>): tuple<int, int> {
+  var a: int;
+  var b: int;
+  <a, b> = numbers;
+
+  fn gcd(a: int, b: int): int {
+    if (b == 0) {
+      return a;
+    } else {
+      return gcd(b, a % b);
+    }
+  }
+
+  var gcd: int = gcd(a, b);
+  var lcm: int = (a * b) / gcd;
+
+  return [gcd, lcm];
+}
+
+fn main(): void {
+  var gcd: int;
+  var lcm: int;
+  <gcd, lcm> = calculateGCDAndLCM([120, 84]);
+
+  printString("GCD is equal:");
+  printInt(gcd);
+  printString("LCM is equal:");
+  printInt(lcm);
+}

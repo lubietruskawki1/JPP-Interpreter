@@ -1,0 +1,18 @@
+fn main(): void {
+  var tupleValue: tuple<int, tuple<int, string>> = [17, [13, "Hello"]];
+  printTuple(tupleValue);
+
+  var a: int;
+  var b: tuple<int, string>;
+  <a, b> = tupleValue;
+  printInt(a);
+  printTuple(b);
+
+  var x: int;
+  var y: int;
+  var z: string;
+  <x, <y, z>> = [a, b];
+  printInt(x);
+  printInt(y);
+  printString(z);
+}

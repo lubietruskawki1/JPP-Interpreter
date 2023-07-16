@@ -1,0 +1,11 @@
+fn f(): int {
+  return 10;
+}
+
+fn g(): int {
+  f();
+}
+
+fn main(): void {
+  var x: int = g();
+}

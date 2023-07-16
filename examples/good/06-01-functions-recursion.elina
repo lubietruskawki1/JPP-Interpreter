@@ -1,0 +1,17 @@
+fn factorial(n: int): int {
+  if (n <= 1) {
+    return 1;
+  }
+  return n * factorial(n - 1);
+}
+
+fn calculateFactorial(n: int): void {
+  printString("The input is:");
+  printInt(n);
+  printString("The factorial is:");
+  printInt(factorial(n));
+}
+
+fn main(): void {
+  calculateFactorial(6);
+}

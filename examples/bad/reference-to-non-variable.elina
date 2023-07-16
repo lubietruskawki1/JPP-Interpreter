@@ -1,0 +1,6 @@
+fn f(ref argument: string): void {
+}
+
+fn main(): void {
+  return f("Hello, world!");
+}

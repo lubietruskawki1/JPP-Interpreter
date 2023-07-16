@@ -1,0 +1,5 @@
+fn main(): void {
+  printInt(13);
+  printBool(true);
+  printString("Hello, world!");
+}

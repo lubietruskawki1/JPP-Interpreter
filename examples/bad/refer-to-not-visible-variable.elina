@@ -1,0 +1,11 @@
+fn f(argument: int): bool {
+  var invisibleVariable: int = 10;
+  fn g(): string {
+    return "Hello, world!";
+  }
+  return false;
+}
+
+fn main(): void {
+  var x: int = invisibleVariable;
+}

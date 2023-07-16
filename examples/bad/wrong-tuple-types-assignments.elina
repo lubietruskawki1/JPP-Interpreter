@@ -1,0 +1,6 @@
+fn main(): void {
+  var x: int;
+  var y: int;
+  var z: tuple<string, tuple<bool, tuple<string>>>;
+  <x, <y, z>> = [12, [11, [false, [true, 10]]]];
+}

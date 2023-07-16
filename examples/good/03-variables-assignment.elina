@@ -1,0 +1,13 @@
+fn main(): void {
+  var intExample: int = 13;
+  intExample = 21;
+  printInt(intExample);
+
+  var boolExample: bool = true;
+  boolExample = false;
+  printBool(boolExample);
+
+  var stringExample: string = "Hello, world!";
+  stringExample = "Goodbye, world!";
+  printString(stringExample);
+}

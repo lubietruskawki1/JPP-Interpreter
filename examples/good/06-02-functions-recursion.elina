@@ -1,0 +1,16 @@
+fn fibonacci(n: int): int {
+  if (n <= 1) {
+    return n;
+  } else {
+    return fibonacci(n-1) + fibonacci(n-2);
+  }
+}
+
+fn main(): void {
+  var n: int = 10;
+
+  printString("The input is:");
+  printInt(n);
+  printString("The fibonacci number is:");
+  printInt(fibonacci(n));
+}

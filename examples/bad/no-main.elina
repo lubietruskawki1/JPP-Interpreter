@@ -1,0 +1,4 @@
+var x: string = "main";
+
+fn notMain(): void {
+}

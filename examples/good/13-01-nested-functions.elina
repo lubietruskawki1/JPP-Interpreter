@@ -1,0 +1,12 @@
+fn f(x: int): int {
+
+  fn g(y: int): int {
+    return x + y;
+  }
+
+  return g(17);
+}
+
+fn main(): void {
+  printInt(f(10));
+}

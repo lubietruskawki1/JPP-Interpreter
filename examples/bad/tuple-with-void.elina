@@ -1,0 +1,3 @@
+fn main(): void {
+  var tupleWithVoid: tuple<string, tuple<tuple<int, tuple<bool, void>>>>;
+}

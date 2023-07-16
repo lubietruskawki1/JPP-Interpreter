@@ -1,0 +1,13 @@
+var x: int = 3;
+
+fn f(): void {
+  printInt(x);
+  var x: string = "Hello, world!";
+  printString(x);
+}
+
+fn main(): void {
+  var x: int = 15;
+  f();
+  printInt(x);
+}

@@ -1,0 +1,10 @@
+fn main(): void {
+  var intValue: int = 13;
+  printInt(intValue);
+
+  var boolValue: bool = true;
+  printBool(boolValue);
+
+  var stringValue: string = "Hello, world!";
+  printString(stringValue);
+}

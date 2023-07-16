@@ -1,0 +1,9 @@
+fn f(): tuple<int, tuple<bool, string, tuple<bool>>> {
+  var x: int;
+  var y: bool;
+  var z: string;
+  return [x, [y, z, [x]]];
+}
+
+fn main(): void {
+}

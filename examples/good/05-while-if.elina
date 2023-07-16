@@ -1,0 +1,22 @@
+fn main(): void {
+  // while
+  var x: int = 5;
+  while (x > 0) {
+    printInt(x);
+    x--;
+  }
+
+  // if
+  var y: int = -10;
+  if (y < 0) {
+    printString("Given number is negative");
+  }
+
+  // if else
+  var z: int = 11;
+  if (z % 2 == 0) {
+    printString("Given number is even");
+  } else {
+    printString("Given number is odd");
+  }
+}

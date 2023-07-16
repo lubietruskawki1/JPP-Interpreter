@@ -1,0 +1,21 @@
+fn passByReference(ref message: string): void {
+  message = "I have changed!";
+}
+
+fn passByValue(message: string): void {
+  message = "I have changed!";
+}
+
+fn main(): void {
+  // passing by reference
+  var string1: string = "Hello, I am an unchanged first string";
+  printString(string1);
+  passByReference(string1);
+  printString(string1);
+
+  // passing by value
+  var string2: string = "Hello, I am an unchanged second string";
+  printString(string2);
+  passByValue(string2);
+  printString(string2);
+}

@@ -1,0 +1,35 @@
+fn getTuple(): tuple<int, tuple<bool, string>> {
+  var x: int = 13;
+  var y: tuple<bool, string> = [x > 0, "Hello"];
+  return [x, y];
+}
+
+fn changeTuple(ref tupleValue: tuple<int, tuple<bool, string>>): void {
+  var a: int;
+  var b: bool;
+  var c: string;
+  <a, <b, c>> = tupleValue;
+  a = -a;
+  b = !b;
+  c = "Goodbye";
+  <tupleValue> = [[a, [b, c]]];
+}
+
+fn changeTupleAgain(ref tupleValue: tuple<int, tuple<bool, string>>): void {
+  var helper: tuple<bool, string> = [true, "Hello again"];
+  tupleValue = [7, helper];
+}
+
+fn main(): void {
+  var tupleValue: tuple<int, tuple<bool, string>>;
+  printTuple(tupleValue);
+
+  tupleValue = getTuple();
+  printTuple(tupleValue);
+  
+  changeTuple(tupleValue);
+  printTuple(tupleValue);
+
+  changeTupleAgain(tupleValue);
+  printTuple(tupleValue);
+}

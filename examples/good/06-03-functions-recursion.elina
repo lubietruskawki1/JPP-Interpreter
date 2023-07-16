@@ -1,0 +1,31 @@
+fn isPrime(n: int): bool {
+  var i: int = 2;
+  while (i * i <= n) {
+    if (n % i == 0) {
+      return false;
+    }
+    i++;
+  }
+  return true;
+}
+
+fn findPrimeNumbers(n: int, ref counter: int): void {
+  var i: int = 2;
+  while (i <= n) {
+    if (isPrime(i)) {
+      counter++;
+    }
+    i++;
+  }
+}
+
+fn main(): void {
+  var range: int = 35;
+  var counter: int = 0;
+  findPrimeNumbers(35, counter);
+
+  printString("The input is:");
+  printInt(range);
+  printString("In the given range the amount of prime numbers is:");
+  printInt(counter);
+}

@@ -1,0 +1,10 @@
+fn f(argument: void): void {
+  return argument;
+}
+
+fn g(): void {
+}
+
+fn main(): void {
+  f(g());
+}

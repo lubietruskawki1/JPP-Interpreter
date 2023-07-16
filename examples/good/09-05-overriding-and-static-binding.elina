@@ -1,0 +1,12 @@
+fn f(x: int): void {
+  var message: string = "Hello";
+  while (x >= 1) {
+    x--;
+    printString(message);
+    var message: string = "Goodbye";
+  }
+}
+
+fn main(): void {
+  f(3);
+}

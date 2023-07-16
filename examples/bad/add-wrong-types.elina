@@ -1,0 +1,5 @@
+fn main(): void {
+  var x: int = 5;
+  var y: string = "Hello";
+  var z: int = x + y;
+}

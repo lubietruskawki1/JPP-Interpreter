@@ -1,0 +1,4 @@
+var x: bool = 6 + 10;
+
+fn main(): void {
+}

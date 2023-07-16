@@ -1,0 +1,11 @@
+fn f(): int {
+	var x: int = 5;
+	while (x >= 1) {
+		x--;
+    return x;
+	}
+}
+
+fn main(): void {
+  var x: int = f();
+}

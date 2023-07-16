@@ -1,0 +1,4 @@
+fn main(): void {
+  var t: tuple<int, tuple<bool, string>>;
+  t = [11, [true, false]];
+}

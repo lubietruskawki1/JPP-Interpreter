@@ -1,0 +1,33 @@
+fn getTuple(): tuple<int, tuple<bool, string>> {
+  var x: int = 13;
+  var y: tuple<bool, string> = [x > 0, "Hello"];
+  return [x, y];
+}
+
+var globTuple: tuple<int, tuple<bool, string>> = getTuple();
+
+fn changeGlobTuple(): void {
+  var a: int;
+  var b: bool;
+  var c: string;
+  <a, <b, c>> = globTuple;
+  a = -a;
+  b = !b;
+  c = "Goodbye";
+  <globTuple> = [[a, [b, c]]];
+}
+
+fn changeGlobTupleAgain(): void {
+  var helper: tuple<bool, string> = [true, "Hello again"];
+  globTuple = [7, helper];
+}
+
+fn main(): void {
+  printTuple(globTuple);
+  
+  changeGlobTuple();
+  printTuple(globTuple);
+
+  changeGlobTupleAgain();
+  printTuple(globTuple);
+}

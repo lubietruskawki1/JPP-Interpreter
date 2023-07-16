@@ -1,0 +1,13 @@
+fn f(): int {
+  var x: int = 21;
+  while (x > 0) {
+    if (x >= 37) {
+      return x;
+    }
+    return x;
+  }
+}
+
+fn main(): void {
+  var x: int = f();
+}

@@ -1,0 +1,8 @@
+fn f(): bool {
+  return true;
+}
+
+fn main(): void {
+  var x: string;
+  x = f();
+}

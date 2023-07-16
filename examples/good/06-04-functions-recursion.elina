@@ -1,0 +1,14 @@
+fn f(): void {
+  var x: int = 1;
+  while (true) {
+    printInt(x);
+    if (x == 3) {
+      return;
+    }
+    x++;
+  }
+}
+
+fn main(): void {
+  f();
+}

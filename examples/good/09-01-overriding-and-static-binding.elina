@@ -1,0 +1,24 @@
+var x: int = 110;
+
+fn main(): void {
+
+  fn globalVariable(): void {
+    x++;
+
+    printString("Hello from globalVariable function, x is equal:");
+    printInt(x);
+  }
+
+  fn localVariable(): void {
+    var x: int = 23;
+    globalVariable();
+
+    printString("Hello from localVariable function, x is equal:");
+    printInt(x);
+  }
+
+  localVariable();
+  
+  printString("Hello from main function, x is equal:");
+  printInt(x);
+}

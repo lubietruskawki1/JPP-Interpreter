@@ -1,0 +1,4 @@
+fn main(): void {
+  var b: bool = true;
+  b++;
+}

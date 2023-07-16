@@ -1,0 +1,13 @@
+fn main(): void {
+  var x: int = 5;
+  while (x >= 0) {
+    while (true) {
+      break;
+    }
+    if (x == 2) {
+      break;
+    }
+    x--;
+  }
+  printInt(x);
+}

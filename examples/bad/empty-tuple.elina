@@ -1,0 +1,3 @@
+fn main(): void {
+  var emptyTuple: tuple<string, tuple<tuple<int, tuple<>>>>;
+}

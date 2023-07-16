@@ -1,0 +1,22 @@
+var x: int = 1;
+
+fn f(): int {
+  return 5;
+}
+
+fn g(): void {
+  x = 10;
+}
+
+fn main(): void {
+  if (x == 1) {
+    printString("First test passed");
+  }
+
+  var x: int = f();
+  g();
+  
+  if (x == 5) {
+    printString("Second test passed");
+  }
+}

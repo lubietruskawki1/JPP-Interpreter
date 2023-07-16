@@ -1,0 +1,10 @@
+fn f(argument: int): bool {
+  fn g(): string {
+    return "Hello, world!";
+  }
+  return false;
+}
+
+fn main(): void {
+  var x: string = g();
+}

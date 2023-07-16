@@ -1,0 +1,9 @@
+fn f(): void {
+  while (true) {
+  }
+  continue;
+}
+
+fn main(): void {
+  f();
+}

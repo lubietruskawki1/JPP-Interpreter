@@ -1,0 +1,31 @@
+fn main(): void {
+  // literals
+  printString("Hello, world!");
+
+  // arithmetic
+  printInt(13 + 7);
+  printInt(13 - 7);
+  printInt(13 * 7);
+  printInt(13 / 7);
+  printInt(13 % 7);
+  printInt(-13);
+  
+  var x: int = 13;
+  x++;
+  printInt(x);
+  x--;
+  printInt(x);
+
+  // logical
+  printBool(!true);
+  printBool(true && false);
+  printBool(true || false);
+
+  // comparisons
+  printBool(13 < 7);
+  printBool(13 <= 7);
+  printBool(13 >= 7);
+  printBool(13 >= 7);
+  printBool(13 == 7);
+  printBool(13 != 7);
+}

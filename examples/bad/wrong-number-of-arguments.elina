@@ -1,0 +1,7 @@
+fn f(argument1: int, argument2: int): int {
+  return 1;
+}
+
+fn main(): void {
+  var x: int = f(1);
+}
