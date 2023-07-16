@@ -6,7 +6,7 @@ Imperative statically typed language inspired by Rust.
 
 The available types of variables are `int`, `bool`, and `string`. Declaring new variables has the following syntax:
 
-```
+```rust
 var variable_name: variable_type = variable_value;
 
 var intValue: int = 13;
@@ -16,7 +16,7 @@ var stringValue: string = "Hello, world!";
 
 And also:
 
-```
+```rust
 var variable_name: variable_type;
 
 var intValue: int;
@@ -26,7 +26,7 @@ var stringValue: string;
 
 To assign a value to a variable, use:
 
-```
+```rust
 variable_name = variable_value;
 
 intValue = 17;
@@ -42,7 +42,7 @@ The following functions are available: `printInt`, `printBool`, `printString`, a
 
 `while` loops are available:
 
-```
+```rust
 var x: int = 5;
 while (x > 0) {
   printInt(x);
@@ -52,7 +52,7 @@ while (x > 0) {
 
 Elina also provides `if` and `if-else` statements:
 
-```
+```rust
 var x: int = 11;
 if (x % 2 == 0) {
   printString("Given number is even");
@@ -65,7 +65,7 @@ if (x % 2 == 0) {
 
 Functions have the following syntax:
 
-```
+```rust
 fn function_name(ref? argument_name1: argument_type1, ...): return_type {}
 
 fn function(argument1: int, ref argument2: string): void {
@@ -84,7 +84,7 @@ Functions of type `void` end with the `return;` statement.
 
 Elina also allows recursive function calls:
 
-```
+```rust
 fn factorial(n: int): int {
   if (n <= 1) {
     return 1;
@@ -97,7 +97,7 @@ fn factorial(n: int): int {
 
 Functions can also be defined inside other functions:
 
-```
+```rust
 fn f(x: int): int {
 
   fn g(y: int): int {
@@ -116,7 +116,7 @@ fn main(): void {
 
 Tuples are available with nested definitions and assignments:
 
-```
+```rust
 var tuple_name: tuple<variable_types> = [contents];
 
 var tuple: tuple<int, tuple<int, string>> = [17, [13, "Hello"]];
@@ -126,7 +126,7 @@ Values can be packed into tuples and unpacked.
 
 To assign a tuple to multiple variables, they must be declared earlier:
 
-```
+```rust
 var x: int;
 var y: int;
 var z: string;
@@ -135,7 +135,7 @@ var z: string;
 
 Or:
 
-```
+```rust
 var a: int;
 var b: tuple<int, string>;
 <a, b> = [17, [13, "Hello"]];
@@ -145,7 +145,7 @@ var b: tuple<int, string>;
 
 Loop manipulation statements are available:
 
-```
+```rust
 var x: int = 5;
 while (x >= 0) {
   if (x == 2) {
@@ -159,7 +159,7 @@ while (x >= 0) {
 
 The `break` and `continue` statements must appear within a `while` block, but this does not apply to nested function declarations. Therefore, the following program is not valid:
 
-```
+```rust
 fn main(): void {
   while (true) {
     fn f(): void {
@@ -186,13 +186,13 @@ Variables that are declared without an assigned value will be assigned the defau
 
 Variables of type `tuple` will be assigned a tuple with default values of the corresponding types, i.e.,
 
-```
+```rust
 var tupleWithoutValue: tuple<int, tuple<bool, string>>;
 ```
 
 will have the value:
 
-```
+```rust
 [0, [false, ""]]
 ```
 
@@ -202,7 +202,7 @@ To be a valid program (according to the type-checker), it must include a `main` 
 
 This means that the shortest valid program in the Elina language is:
 
-```
+```rust
 fn main(): void {
   return;
 }
@@ -216,7 +216,7 @@ Every `return` statement in a function must return the correct type.
 
 The `return` statement **can** only appear in both blocks of an `if else` statement if both blocks return the correct type:
 
-```
+```rust
 fn f(): int {
   if (true) {
     return 13;
@@ -228,7 +228,7 @@ fn f(): int {
 
 The `return` statement **cannot** only appear in one block of an `if else` statement:
 
-```
+```rust
 fn f(): int {
   if (true) {
     return 13;
@@ -240,7 +240,7 @@ fn f(): int {
 
 The `return` statement **cannot** only appear in the block of an `if` statement:
 
-```
+```rust
 fn f(): int {
   if (true) {
     return 13;
@@ -250,7 +250,7 @@ fn f(): int {
 
 The `return` statement **cannot** only appear in the block of a `while` statement:
 
-```
+```rust
 fn f(): int {
   while (true) {
     return 13;
@@ -260,7 +260,7 @@ fn f(): int {
 
 The above invalid examples are allowed if the function also contains another "publicly accessible" `return`:
 
-```
+```rust
 fn f(): int {
   while (true) {
     return 13;
@@ -273,14 +273,14 @@ fn f(): int {
 
 Variables of type `void` are illegal. As for tuples, empty tuples are not allowed:
 
-```
+```rust
 emptyTuple: tuple<>
 []
 ```
 
 Tuples containing values of type `void` are also not allowed:
 
-```
+```rust
 var tupleWithVoid: tuple<void>
 [main()]
 ```
