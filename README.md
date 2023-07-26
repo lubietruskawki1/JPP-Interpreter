@@ -2,7 +2,7 @@
 
 Project written for the Languges and Paradigms of Programming (pol. Języki i Paradygmaty Programowania, JPP) course offered by the Faculty of Mathematics, Informatics and Mechanics at the University of Warsaw 2022/2023.
 
-Interpreter of Elina imperative language with static type-checker, written in Haskell.
+Interpreter of a custom-designed imperative language called Elina, with a static type-checker, written in Haskell.
 
 ## Building and running
 
